@@ -7,25 +7,6 @@ use crate::types::{
 };
 use crate::errors::LendingError;
 
-// ============================================================================
-// LENDING SMART CONTRACT - REFACTORED FOR SENIOR DEVELOPER STANDARDS
-// ============================================================================
-//
-// This contract has been organized into logical sections for better maintainability:
-//
-// 1. STORAGE STRUCTURE     - Contract state and storage variables
-// 2. EVENT DEFINITIONS     - All contract events for transparency
-// 3. CONSTRUCTOR          - Contract initialization
-// 4. CORE LENDING OPS     - Basic operations: create, fund, repay
-// 5. ADVANCED LENDING OPS - Enhanced features: early repay, partial, extension
-// 6. RISK MANAGEMENT      - Late fees and loan refinancing
-// 7. QUERY OPERATIONS     - All getter and calculation functions
-// 8. PRIVATE HELPERS      - Internal utility functions
-//
-// Total Lines: ~922 (down from 869, but much better organized)
-// Features: 5/8 phases completed (Phase 1: 100% complete)
-// ============================================================================
-
 #[ink::contract]
 pub mod lending_contract {
     use super::*;
