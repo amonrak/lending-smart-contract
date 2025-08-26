@@ -1,6 +1,3 @@
-//! Basic usage example for the Lending Smart Contract
-//! This example demonstrates the core functionality of the contract
-
 use ink::env::{
     DefaultEnvironment,
     test,
