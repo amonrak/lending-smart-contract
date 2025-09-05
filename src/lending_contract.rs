@@ -11,10 +11,6 @@ use crate::errors::LendingError;
 pub mod lending_contract {
     use super::*;
 
-    // ============================================================================
-    // STORAGE STRUCTURE
-    // ============================================================================
-    
     #[ink(storage)]
     pub struct LendingContract {
         owner: AccountId,
@@ -26,10 +22,6 @@ pub mod lending_contract {
         min_collateral_ratio: u16, // Basis points
     }
 
-    // ============================================================================
-    // EVENT DEFINITIONS
-    // ============================================================================
-    
     #[ink(event)]
     pub struct LoanCreated {
         #[ink(topic)]
