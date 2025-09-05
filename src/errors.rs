@@ -20,6 +20,11 @@ pub enum LendingError {
 impl From<LendingError> for String {
     fn from(error: LendingError) -> Self {
         match error {
+            LendingError::Unauthorized => "Unauthorized action".into(),
+            LendingError::TransferFailed => "Transfer failed".into(),
+            LendingError::InvalidAmount => "Invalid amount".into(),
+            LendingError::LoanExpired => "Loan has expired".into(),
+            LendingError::CollateralSeized => "Collateral has been seized".into(),
             LendingError::InsufficientBalance => "Insufficient balance".into(),
             LendingError::InsufficientCollateral => "Insufficient collateral".into(),
             LendingError::LoanNotFound => "Loan not found".into(),
@@ -28,11 +33,6 @@ impl From<LendingError> for String {
             LendingError::InvalidInterestRate => "Invalid interest rate".into(),
             LendingError::InvalidDuration => "Invalid duration".into(),
             LendingError::UserBlacklisted => "User is blacklisted".into(),
-            LendingError::Unauthorized => "Unauthorized action".into(),
-            LendingError::TransferFailed => "Transfer failed".into(),
-            LendingError::InvalidAmount => "Invalid amount".into(),
-            LendingError::LoanExpired => "Loan has expired".into(),
-            LendingError::CollateralSeized => "Collateral has been seized".into(),
         }
     }
 } 
